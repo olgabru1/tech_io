@@ -1,0 +1,12 @@
+import requests
+
+def check_ip(ip_address):
+    url = f"https://ipinfo.io/{ip_address}/json"
+    response = requests.get(url)
+    data = response.json()
+    return data
+
+ip_to_check = "8.8.8.8"  # Замените на нужный IP-адрес
+
+result = check_ip(ip_to_check)
+print(result)
